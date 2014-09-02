@@ -1,0 +1,16 @@
+name: appname
+version: 1
+handle:
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/login$" ) goto "/?m=user&a=login"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/exit$" ) goto "/?m=user&a=logout"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/x$" ) goto "/x/"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/x/$" ) goto "/?m=xing"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/x/([0-9]+)$" ) goto "/?m=project&a=show&pid=$1"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/x/([0-9]+)/d$" ) goto "/?m=xing&a=delp&pid=$1"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/i/([0-9]+)$" ) goto "/?m=xing&a=info&bid=$1"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/d/([0-9]+)$" ) goto "/?m=xing&a=del&bid=$1"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/ip/(.*)$" ) goto "/?m=project&a=ip&ip=$1"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/([a-z0-9]{6})$" ) goto "/?u=$1"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/add$" ) goto "/?m=project&a=add"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/onadd$" ) goto "/?m=project&a=onadd"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "^/set$" ) goto "/?m=xing&a=setting"

