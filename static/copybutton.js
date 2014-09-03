@@ -1,13 +1,15 @@
 var client = new ZeroClipboard( document.getElementById("copy-button") );
 
 client.on( "ready", function( readyEvent ) {
-  // alert( "ZeroClipboard SWF is ready!" );
-
   client.on( "aftercopy", function( event ) {
-    // `this` === `client`
-    // `event.target` === the element that was clicked
-    //event.target.style.display = "none";
-    //alert("Copied text to clipboard: " + event.data["text/plain"] );
     event.target.disabled = "disabled";
-  } );
-} );
+    $(event.target).attr('data-original-title', "已复制到剪贴板").tooltip('show');
+    });
+});
+
+$(document).ready(function(){
+    $('[rel="tooltip"]').tooltip();
+    $('#copy-button').on('blur',function(){
+        $(this).attr('data-original-title', "点击以复制");
+    });
+});

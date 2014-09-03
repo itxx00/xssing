@@ -7,7 +7,7 @@
     <textarea readonly="readonly" autofocus="" rows="11" class="col-xs-12" id="TheCookie"><?php echo $info['cookie'] ?></textarea>
 </div>
 <div class="modal-footer">
-   <button class="btn btn-success btn-sm" type="button" id="copy-button" data-clipboard-target="TheCookie" data-clipboard-text="Copy Me!" title="Copy to clipboard">复制到剪贴板</button>
-    <script src="/static/copybutton.js"></script>
+   <button class="btn btn-success btn-sm" type="button" id="copy-button" rel="tooltip" data-clipboard-target="TheCookie" data-original-title="点击以复制">复制</button>
     <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">关闭</button>
+    <script src="/static/copybutton.js"></script>
 </div>
