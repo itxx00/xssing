@@ -10,7 +10,7 @@ class XingAction extends AppAction{
         echo substr(md5(time()),0,6);
     }
 
-    function info(){ 
+    function info(){
         $bid=intval($_GET['bid']);
         if($bid){
             $info=new InfoModel($bid);
@@ -51,16 +51,16 @@ class XingAction extends AppAction{
      * 批量删除
      */
     function dels(){
-        foreach ($_POST['delarr'] as $bid){				
+        foreach ($_POST['delarr'] as $bid){
             $bid=intval($bid);
-            if($bid){				 
+            if($bid){
                 $xing=new XingModel();
                 $info=new InfoModel($bid);
                 if($xing->del_browser($bid)){
-                    $info->del();					 
+                    $info->del();
                 }else{
-                }				 
-            }				
+                }
+            }
         }
         cpmsg("delete success");
     }
@@ -70,16 +70,16 @@ class XingAction extends AppAction{
      */
     function setting(){
         $user=new UserModel();
-        $data=$user->fetch_first("*",array("uid"=>$_SESSION['uid']));		 		
+        $data=$user->fetch_first("*",array("uid"=>$_SESSION['uid']));
         include view_file();
     }
 
-    function onsetting(){   	
-        $email=$_POST['eamil'];  	   
-        $user=new UserModel();	    	  
-        if($user->update(array("email"=>$email), array("uid"=>$_SESSION['uid']))){  	  	 	  	
-            cpmsg("success");	  	
-        } 	
+    function onsetting(){
+        $email=$_POST['eamil'];
+        $user=new UserModel();
+        if($user->update(array("email"=>$email), array("uid"=>$_SESSION['uid']))){
+            cpmsg("success");
+        }
     }
 }
 

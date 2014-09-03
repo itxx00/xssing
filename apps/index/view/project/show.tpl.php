@@ -90,8 +90,7 @@ if(is_array($browsers)){
             <a href="/d/{$browser['bid']}" class="btn btn-sm btn-danger">删除</a>
             </td>
             </tr>
-
-            END;
+END;
     };
 
 }

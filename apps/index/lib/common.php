@@ -52,7 +52,7 @@ function cpmsg($message,$type="success",$url="-1",$time=666,$title="INFO"){
         </tr> <tr> <td height="80" bgcolor="#FFFFFF" style="height:75px;line-height:22px;" align="center" valign="middle">
         <a href="$url"> <strong> $message </strong>waiting...</a><script> setTimeout("$jsaction",$time); </script>
         </td> </tr></tbody></table>
-        END;
+END;
 }
 
 function send_mail($to,$title,$content){
@@ -67,7 +67,7 @@ function send_mail($to,$title,$content){
     $mail->Port=25;
     $mail->From = "senderemailaccount@163.com"; //邮件发送者email地址
     $mail->FromName = "XSS";
-    $mail->AddAddress($to, 'youremailaccount@he.re']);//收件人地址，可以替换成任何想要接收邮件的email信箱,格式是AddAddress("收件人email","收件人姓名")
+    $mail->AddAddress($to, 'Security Engineer');//收件人地址，可以替换成任何想要接收邮件的email信箱,格式是AddAddress("收件人email","收件人姓名")
     //$mail->AddReplyTo("", "");
     $mail->IsHTML(true);
     $mail->Subject = $title;

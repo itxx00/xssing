@@ -37,12 +37,10 @@ class LOG{
         }
         $time=round((self::$stopTime - self::$startTime) , 4);  //运行时间
         $title="UAUC Debug Bar$ "." Time:".$time." Url:".MODULE_NAME."-".ACTION_NAME;
-        echo
-            <<<SQL
-            <div id="debug-bar" style="background:#F5F5F5;color:#888;margin:6px;font-size:14px;border:1px dashed silver;padding:8px"><div style="color:gray;font-weight:bold"><span>$title</span><span onclick="this.parentNode.parentNode.style.display='none'" style="cursor:pointer;float:right;width:10px;background:#500;border:1px solid #555;color:white">X</span></div><div style="overflow:auto;height:100px;text-align:left;">$msg </div> </div>
-            SQL;
-
-
+echo
+<<<SQL
+    <div id="debug-bar" style="background:#F5F5F5;color:#888;margin:6px;font-size:14px;border:1px dashed silver;padding:8px"><div style="color:gray;font-weight:bold"><span>$title</span><span onclick="this.parentNode.parentNode.style.display='none'" style="cursor:pointer;float:right;width:10px;background:#500;border:1px solid #555;color:white">X</span></div><div style="overflow:auto;height:100px;text-align:left;">$msg </div> </div>
+SQL;
     }
 
     public static function save(){

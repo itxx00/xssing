@@ -7,10 +7,10 @@
 <tbody>
   <tr>
     <td><table width="95%" cellspacing="2" cellpadding="3" border="0" bgcolor="#FFFFFF" align="center" class="admintable">
-        <form id="myform" method="post" name="myform"   action="?m=xing&a=onsetting">
+        <form id="myform" method="post" name="myform"   action="/?m=xing&a=onsetting">
         <tbody>
           <tr>
-            <td width="10%" class="b1_1">email to recive message</td>
+            <td width="10%" class="b1_1">接收通知信息的Email</td>
             <td class="b1_1"><input type="text" maxlength="60" size="60" id="Title" name="eamil" value="<?php echo $data['email'] ?>"></td>
               <td class="b1_1"> <input type="submit" value="submit" class="gbtn"></td>
           </tr>
